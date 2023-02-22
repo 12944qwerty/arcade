@@ -1,0 +1,32 @@
+.games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container {
+    margin: 10px 0px;
+    border: 1px solid darkgray;
+    padding: 10px;
+    background-color: var(--color);
+}
+
+.container .image {
+    margin-bottom: -5px;
+}
+
+.container .title {
+    margin-left: 7px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-size: large;
+
+    color: black;
+    text-decoration: none;
+}
+
+.games a {
+    text-decoration: none;
+}
