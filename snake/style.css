@@ -1,0 +1,64 @@
+.board {
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgb(0, 0, 0, 0.7);
+    display: grid;
+    grid-template-areas: '. . . . . . . . . . . . . . . . . . . . ';
+}
+
+.grid {
+    width: 23px;
+    height: 23px;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.grid[data-apple=true]:before {
+    content: '';
+    position: absolute;
+    background-color: red;
+    border-radius: 70% 70% 120% 120%;
+    width: inherit;
+    height: inherit;
+}
+.grid[data-apple=true]:after{
+    content: '';
+    width: 3px;
+    height: 10px;
+    background-color:brown;
+    position:absolute;
+    z-index: 9999;
+    transform: translateY(-4px) translateX(10px);
+}
+
+.grid[data-tail=true] {
+    background-color: peachpuff;
+    
+}
+
+.grid[data-body=true] {
+    background-color: peachpuff;
+}
+
+.grid[data-head=true] {
+    background-color: blue;
+}
+.grid[data-head=true]:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: white;
+}
+.grid[data-head=true][data-direction=right]:before {
+    transform: translateX(17px) translateY(3px);
+}
+.grid[data-head=true][data-direction=up]:before {
+    transform: translateX(3px) translateY(3px);
+}
+.grid[data-head=true][data-direction=down]:before {
+    transform: translateX(17px) translateY(17px);
+}
+.grid[data-head=true][data-direction=left]:before {
+    transform: translateX(3px) translateY(17px);
+}
