@@ -45,16 +45,16 @@ function init(restart_=false) {
     document.addEventListener('keyup', (e) => {
         if (!started || paused) return;
 
-        if (e.key === 'ArrowUp' && direction != 'down') {
+        if (['ArrowUp', 'w'].includes(e.key) && direction != 'down') {
             plannedDirection = 'up'
         }
-        if (e.key === 'ArrowDown' && direction != 'up') {
+        if (['ArrowDown', 's'].includes(e.key) && direction != 'up') {
             plannedDirection = 'down'
         }
-        if (e.key === 'ArrowRight' && direction != 'left') {
+        if (['ArrowRight', 'd'].includes(e.key) && direction != 'left') {
             plannedDirection = 'right'
         }
-        if (e.key === 'ArrowLeft' && direction != 'right') {
+        if (['ArrowLeft', 'a'].includes(e.key) && direction != 'right') {
             plannedDirection = 'left'
         }
     });
