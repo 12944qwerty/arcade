@@ -163,6 +163,7 @@ function start() {
     interval = setInterval(tick, 100);
 
     started = true;
+    paused = false;
     updateScreen();
 }
 
